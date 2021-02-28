@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20210228 11:37:09.312" rpa="false">
+<suite id="s1" name="Instagram" source="C:\Users\kajmi\PycharmProjects\instagram\Tests\instagram.robot">
+<test id="s1-t1" name="USER CAN SURF BETWEEN HOME PAGE and PROFILE PAGE">
+<kw name="Open Test Application" type="setup">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=7.0</arg>
+<arg>deviceName=Pixel 4 API 24</arg>
+<arg>appPackage=com.instagram.android</arg>
+<arg>appActivity=com.instagram.mainactivity.MainActivity</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:37:09.925" endtime="20210228 11:37:25.553"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN-BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:37:25.553" endtime="20210228 11:37:26.244"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:37:09.925" endtime="20210228 11:37:26.245"></status>
+</kw>
+<kw name="Login With Correct Credentials">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-BUTTON}</arg>
+</arguments>
+<msg timestamp="20210228 11:37:26.249" level="INFO">Clicking element 'id=com.instagram.android:id/log_in_button'.</msg>
+<status status="PASS" starttime="20210228 11:37:26.247" endtime="20210228 11:37:26.310"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210228 11:37:31.312" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210228 11:37:26.310" endtime="20210228 11:37:31.312"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-EMAIL-FIELD}</arg>
+<arg>${USER-DETAILS-EMAIL}</arg>
+</arguments>
+<msg timestamp="20210228 11:37:31.314" level="INFO">Typing text 'appium_1987' into text field 'id=com.instagram.android:id/login_username'</msg>
+<status status="PASS" starttime="20210228 11:37:31.312" endtime="20210228 11:37:31.883"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-PASSWORD-FIELD}</arg>
+<arg>${USER-DETAILS-PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210228 11:37:31.887" level="INFO">Typing password into text field 'id=com.instagram.android:id/password'</msg>
+<status status="PASS" starttime="20210228 11:37:31.883" endtime="20210228 11:37:32.933"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-SIGNIN-BUTTON}</arg>
+</arguments>
+<msg timestamp="20210228 11:37:32.936" level="INFO">Clicking element 'id=com.instagram.android:id/button_text'.</msg>
+<status status="PASS" starttime="20210228 11:37:32.933" endtime="20210228 11:37:33.465"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210228 11:37:38.466" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210228 11:37:33.465" endtime="20210228 11:37:38.466"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PROFILE-AVATAR}</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:37:38.466" endtime="20210228 11:37:39.050"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:37:26.246" endtime="20210228 11:37:39.051"></status>
+</kw>
+<kw name="Go To Profile">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${PROFILE-AVATAR}</arg>
+</arguments>
+<msg timestamp="20210228 11:37:39.060" level="INFO">Clicking element 'id=com.instagram.android:id/tab_avatar'.</msg>
+<status status="PASS" starttime="20210228 11:37:39.057" endtime="20210228 11:37:39.156"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210228 11:37:44.158" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210228 11:37:39.157" endtime="20210228 11:37:44.158"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PROFILE-MAIN-PAGE}</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:37:44.158" endtime="20210228 11:37:44.294"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:37:39.057" endtime="20210228 11:37:44.294"></status>
+</kw>
+<kw name="Go To Home">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${GO-BACK-HOME-PAGE}</arg>
+</arguments>
+<msg timestamp="20210228 11:37:44.296" level="INFO">Clicking element '//android.widget.Button[@content-desc="Home"]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20210228 11:37:44.295" endtime="20210228 11:37:44.823"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PROFILE-AVATAR}</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:37:44.823" endtime="20210228 11:37:45.365"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:37:44.295" endtime="20210228 11:37:45.365"></status>
+</kw>
+<kw name="Quit Application" library="AppiumLibrary" type="teardown">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20210228 11:37:45.372" endtime="20210228 11:37:46.336"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:37:09.924" endtime="20210228 11:37:46.343" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Login success">
+<kw name="Open Test Application" type="setup">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=7.0</arg>
+<arg>deviceName=Pixel 4 API 24</arg>
+<arg>appPackage=com.instagram.android</arg>
+<arg>appActivity=com.instagram.mainactivity.MainActivity</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:37:46.350" endtime="20210228 11:38:01.524"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN-BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:38:01.525" endtime="20210228 11:38:01.840"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:37:46.348" endtime="20210228 11:38:01.840"></status>
+</kw>
+<kw name="Login With Correct Credentials">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-BUTTON}</arg>
+</arguments>
+<msg timestamp="20210228 11:38:01.845" level="INFO">Clicking element 'id=com.instagram.android:id/log_in_button'.</msg>
+<status status="PASS" starttime="20210228 11:38:01.843" endtime="20210228 11:38:02.344"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210228 11:38:07.346" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210228 11:38:02.344" endtime="20210228 11:38:07.346"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-EMAIL-FIELD}</arg>
+<arg>${USER-DETAILS-EMAIL}</arg>
+</arguments>
+<msg timestamp="20210228 11:38:07.349" level="INFO">Typing text 'appium_1987' into text field 'id=com.instagram.android:id/login_username'</msg>
+<status status="PASS" starttime="20210228 11:38:07.346" endtime="20210228 11:38:07.914"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-PASSWORD-FIELD}</arg>
+<arg>${USER-DETAILS-PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210228 11:38:07.917" level="INFO">Typing password into text field 'id=com.instagram.android:id/password'</msg>
+<status status="PASS" starttime="20210228 11:38:07.914" endtime="20210228 11:38:08.975"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-SIGNIN-BUTTON}</arg>
+</arguments>
+<msg timestamp="20210228 11:38:08.979" level="INFO">Clicking element 'id=com.instagram.android:id/button_text'.</msg>
+<status status="PASS" starttime="20210228 11:38:08.976" endtime="20210228 11:38:09.522"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210228 11:38:14.524" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210228 11:38:09.522" endtime="20210228 11:38:14.524"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PROFILE-AVATAR}</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:38:14.524" endtime="20210228 11:38:15.303"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:38:01.842" endtime="20210228 11:38:15.305"></status>
+</kw>
+<kw name="Quit Application" library="AppiumLibrary" type="teardown">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20210228 11:38:15.308" endtime="20210228 11:38:16.252"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:37:46.347" endtime="20210228 11:38:16.256" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Login Failure">
+<kw name="Open Test Application" type="setup">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=7.0</arg>
+<arg>deviceName=Pixel 4 API 24</arg>
+<arg>appPackage=com.instagram.android</arg>
+<arg>appActivity=com.instagram.mainactivity.MainActivity</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:38:16.260" endtime="20210228 11:38:31.157"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN-BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:38:31.157" endtime="20210228 11:38:31.935"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:38:16.259" endtime="20210228 11:38:31.935"></status>
+</kw>
+<kw name="Login With Bad Credentials">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-BUTTON}</arg>
+</arguments>
+<msg timestamp="20210228 11:38:31.941" level="INFO">Clicking element 'id=com.instagram.android:id/log_in_button'.</msg>
+<status status="PASS" starttime="20210228 11:38:31.938" endtime="20210228 11:38:31.992"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210228 11:38:36.994" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210228 11:38:31.992" endtime="20210228 11:38:36.994"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-EMAIL-FIELD}</arg>
+<arg>dump</arg>
+</arguments>
+<msg timestamp="20210228 11:38:36.998" level="INFO">Typing text 'dump' into text field 'id=com.instagram.android:id/login_username'</msg>
+<status status="PASS" starttime="20210228 11:38:36.994" endtime="20210228 11:38:37.559"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-PASSWORD-FIELD}</arg>
+<arg>dump</arg>
+</arguments>
+<msg timestamp="20210228 11:38:37.565" level="INFO">Typing password into text field 'id=com.instagram.android:id/password'</msg>
+<status status="PASS" starttime="20210228 11:38:37.560" endtime="20210228 11:38:38.606"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN-SIGNIN-BUTTON}</arg>
+</arguments>
+<msg timestamp="20210228 11:38:38.610" level="INFO">Clicking element 'id=com.instagram.android:id/button_text'.</msg>
+<status status="PASS" starttime="20210228 11:38:38.607" endtime="20210228 11:38:39.165"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>"Try Again"</arg>
+</arguments>
+<status status="PASS" starttime="20210228 11:38:39.165" endtime="20210228 11:38:42.660"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:38:31.936" endtime="20210228 11:38:42.660"></status>
+</kw>
+<kw name="Quit Application" library="AppiumLibrary" type="teardown">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20210228 11:38:42.661" endtime="20210228 11:38:43.194"></status>
+</kw>
+<status status="PASS" starttime="20210228 11:38:16.258" endtime="20210228 11:38:43.196" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210228 11:37:09.317" endtime="20210228 11:38:43.199"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Instagram">Instagram</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
